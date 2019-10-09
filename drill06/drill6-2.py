@@ -242,30 +242,7 @@ def draw_curve_10_points(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10):
         frame = (frame + 1) % 8
         pico2d.update_canvas()
         delay(0.05)
-       #p10 p1
-    for i in range(0, 100, 2):
-        clear_canvas()
-        background.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2)
 
-        arrow.draw(p1[0], p1[1], 50, 50)
-        arrow.draw(p2[0], p2[1], 50, 50)
-        arrow.draw(p3[0], p3[1], 50, 50)
-        arrow.draw(p4[0], p4[1], 50, 50)
-        arrow.draw(p5[0], p5[1], 50, 50)
-        arrow.draw(p6[0], p6[1], 50, 50)
-        arrow.draw(p7[0], p7[1], 50, 50)
-        arrow.draw(p8[0], p8[1], 50, 50)
-        arrow.draw(p9[0], p9[1], 50, 50)
-        arrow.draw(p10[0], p10[1], 50, 50)
-        t = i / 100
-        player_x = ((-t ** 3 + 2 * t ** 2 - t) * p9[0] + (3 * t ** 3 - 5 * t ** 2 + 2) * p10[0] + (
-                -3 * t ** 3 + 4 * t ** 2 + t) * p1[0] + (t ** 3 - t ** 2) * p2[0]) / 2
-        player_y = ((-t ** 3 + 2 * t ** 2 - t) * p9[1] + (3 * t ** 3 - 5 * t ** 2 + 2) * p10[1] + (
-                -3 * t ** 3 + 4 * t ** 2 + t) * p1[1] + (t ** 3 - t ** 2) * p2[1]) / 2
-        character.clip_draw(frame * 100, 0, 100, 100, player_x, player_y)
-        frame = (frame + 1) % 8
-        pico2d.update_canvas()
-        delay(0.05)
     pass
 
 def handle_events():
