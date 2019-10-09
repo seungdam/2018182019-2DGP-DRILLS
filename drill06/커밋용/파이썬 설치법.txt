@@ -1,0 +1,6 @@
+1. windows  x86 -64 execitable installer 다운 후 실행
+2. add python 3.7 to path 체크
+3. customize installation 실행
+4. 기본 다 체크 후 next
+5. install for all users 체크
+6. 처음 설치의 경우  disable file length 클릭
